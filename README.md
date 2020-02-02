@@ -18,24 +18,28 @@ This plugin will add the `sql` namespace in your Fastify instance.
 Example:
 
 ```js
-const fastify = require("fastify")();
+const fastify = require('fastify')()
 
-fastify.register(require("fastify-postgresjs"), {
-  url: "postgres://postgres@localhost/postgres"
-});
+const url = 'postgres://postgres@localhost/postgres'
 
-fastify.get("/users/:id", async (req, reply) => {
+const options = { /* postgres.js options */ }
+
+fastify.register(require('fastify-postgresjs'), {
+  url, ...options
+})
+
+fastify.get('/users/:id', async (req, reply) => {
   const users = await fastify.sql`
     select * from users
     where id = ${req.params.id}
-  `;
-  return users;
-});
+  `
+  return users
+})
 
 fastify.listen(3000, err => {
-  if (err) throw err;
-  console.log(`server listening on ${fastify.server.address().port}`);
-});
+  if (err) throw err
+  console.log(`server listening on ${fastify.server.address().port}`)
+})
 ```
 
 ## Development and Testing
@@ -45,6 +49,8 @@ First, start postgres with:
 ```
 $ docker run --rm -d -p 5432:5432 --name fastify-postgresjs postgres:11-alpine
 ```
+
+Run the tests.
 
 ```
 $ npm test
