@@ -1,0 +1,43 @@
+{
+  "name": "fastify-postgresjs",
+  "version": "0.0.0-semantic-release",
+  "description": "Fastify postgres.js plugin",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herrmannplatz/fastify-postgresjs.git"
+  },
+  "keywords": [
+    "postgres",
+    "postgresql",
+    "sql",
+    "postgres.js",
+    "connection",
+    "database",
+    "fastify",
+    "fastify-plugin"
+  ],
+  "author": "René Herrmann <rene@herrmannplatz.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/herrmannplatz/fastify-postgresjs/issues"
+  },
+  "homepage": "https://github.com/herrmannplatz/fastify-postgresjs#readme",
+  "devDependencies": {
+    "fastify": "^2.11.0",
+    "jest": "^25.1.0",
+    "postgres": "^1.0.2",
+    "semantic-release": "^17.0.2",
+    "standard": "^14.3.1"
+  },
+  "peerDependencies": {
+    "postgres": ">=1.0.0"
+  },
+  "dependencies": {
+    "fastify-plugin": "^1.6.0"
+  }
+}
