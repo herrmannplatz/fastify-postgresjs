@@ -7,7 +7,7 @@ Fastify PostgreSQL connection plugin, based on [postgres](https://github.com/por
 ## Install
 
 ```
-npm i pg fastify-postgresjs --save
+npm i postgres fastify-postgresjs --save
 ```
 
 ## Usage
